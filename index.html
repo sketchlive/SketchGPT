@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SketchGPT: Animate static 2D sketch illustrations using text-to-video prior">
+  <meta name="google-site-verification" content="D0ys6wLg07UNB0wxvc8V9r64Pwg4VU6mB_2gZNkVLhc" />
+  <meta name="keywords" content=" Sketch Animation, Text-to-video prior, Regularization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SketchGPT: Animate static 2D sketch illustrations using text-to-video prior</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFL093Z84S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-BFL093Z84S');
+  </script>	
+	
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SketchGPT: Animate static 2D sketch illustrations using text-to-video prior</h1>
+	  <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Anonymous Authors</a><sup></sup></span>
+          </div>
+		  
+<!--           <div class="is-size-5 publication-authors">
+		  *The first two authors contribute equally to this work, and assert joint
+first authorship.
+		  </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+			  		
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sketchlive/SketchGPT"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+			  
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100% ">
+        <source src="static/assets/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <!--<h2 class="subtitle has-text-centered">-->
+	  <h2 class="subtitle ">
+        <!--<span class="dnerf">Surface-Based Layered Representation </span> turns single still image into animated videos.-->
+		<b>Abstract.</b> Animation of the sketches using traditional tools is challenging and complex. The sketches provide a visual representation for an explanation, and the animation of these sketches provides an experience of real-time scenarios. In this paper,  we propose SketchGPT,  a method to animate a given input sketch using the text prompt description. We use a bezier representation of the sketch since the sketch contains only the strokes. Since previous methods are not able to estimate the smooth and accurate motion, they also fail to preserve the topology of the sketch in the animation. We use LA regularization to maintain temporal consistency by estimating smooth and accurate motion. Further, a shape preserving arap loss to maintain the rigidity of the sketch helps to avoid the topology change and shape distortion. Our method outperforms state-of-the-art results in both quantitative and qualitative evaluation.
+		
+		</h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-widescreen" id="gallery">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <!-- <div class="columns is-centered"> -->
+      <div class="column is-full-width">
+            <h2 class="title is-3">Results</h2><br>
+    </div>
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <div class="gallery">
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/assets/results/horse_svg.png" alt="dolphin_2"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/assets/results/horse.gif" alt="dolphin_2"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A galloping horse." title="">A galloping horse.</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/assets/results/surfer0_scaled1.png" alt="flower_a1"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/assets/results/surfer.gif" alt="flower_a1"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A surfer riding and maneuvering on waves on a surfboard." title="">A surfer riding and maneuvering on waves on a surfboard.</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/butterfly_1_input.gif" alt="butterfly_1"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/butterfly_1.gif" alt="butterfly_1"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A butterfly fluttering its wings and flying gracefully." title="">A butterfly fluttering its win [..]</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/gazelle_3_input.gif" alt="gazelle_3"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/gazelle_3.gif" alt="gazelle_3"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A gazelle galloping and jumping to escape predators." title="">A gazelle galloping and jumpin [..]</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/sapceship1_input.gif" alt="sapceship1"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/sapceship1.gif" alt="sapceship1"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The spaceship accelerates rapidly during takeoff, utilizing powerful rocket engines." title="">The spaceship accelerates rapi [..]</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/cat3_input.gif" alt="cat3"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/cat3.gif" alt="cat3"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The cat is playing." title="">The cat is playing. [..]</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/ballerina2_input.gif" alt="ballerina2"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/ballerina2.gif" alt="ballerina2"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The ballerina is dancing." title="">The ballerina is dancing. [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/cat3_input.gif" alt="cat3"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/cat3.gif" alt="cat3"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The cat is playing." title="">The cat is playing. [..]</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/ballerina2_input.gif" alt="ballerina2"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/ballerina2.gif" alt="ballerina2"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The ballerina is dancing." title="">The ballerina is dancing. [..]</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/ceiling_fan_input.gif" alt="ceiling_fan"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/ceiling_fan.gif" alt="ceiling_fan"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A ceiling fan rotating blades to circulate air in a room." title="">A ceiling fan rotating blades  [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+            <div class="inner_gallery">
+                <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/camel.gif" alt="bike"/>
+                <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/camel.gif" alt="bike"/>
+            </div>
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A camel is walking" title="">A camel is walking</h6>
+        </div>
+
+        <div class="captioned_video">
+            <div class="inner_gallery">
+                  <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/teaser/yoga.gif" alt="bike"/>
+                  <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/teaser/yoga.gif" alt="bike"/>
+            </div>
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="&#34;The woman gracefully flowed through her yoga routine, moving from one pose to another with fluid and controlled motion&#34;" title="">&#34;[...] flowed through her yoga routine [...]&#34;</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison</h2>
+
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 autoplay controls muted loop
+                 width="90%">
+            <source src="static/assets/AnimatedResults/00116_crf32.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+		<!-- <h3 class="title is-5" align="center">Waterfall</h3> -->
+
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 autoplay controls muted loop
+                 width="90%">
+            <source src="static/assets/AnimatedResults/00057_crf32.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Anonymous,
+  author    = {Anonymous Authors},
+  title     = {SketchGPT: Animate static 2D sketch illustrations using text-to-video prior},
+  journal   = {arXiv preprint},
+  volume    = {arXiv:XXX},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+		
+          <p>
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
